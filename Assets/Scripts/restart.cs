@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class restart : MonoBehaviour
+public class Restart : MonoBehaviour
 {
-    [SerializeField] private float delay = 1f; 
+    [SerializeField] private float delay = 1f;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
