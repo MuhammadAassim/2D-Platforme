@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isFlipped = false; // Gravity flip hua hai ya nahi
     private bool isGrounded; // Player ground par hai ya nahi
     private bool canDoubleJump; // Double jump allowed hai ya nahi
+    private bool playerDied; // Player mara hai ya nahi
     private int jumpUsed; // Kitni baar jump use kiya gaya
 
     private Vector2 moveVelocity; // Movement ka velocity vector
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     public bool IsFlipped => isFlipped; // Gravity flipped hai ya nahi
     public bool IsGrounded => isGrounded; // Grounded status ka public accessor
     public bool CanDoubleJump { get => canDoubleJump; set => canDoubleJump = value; } // Double jump ka getter/setter
+    public bool PlayerDied => playerDied; // Death status ka public accessor
     public int JumpUsed { get => jumpUsed; set => jumpUsed = value; } // Jump count ka getter/setter
     public float HorInput => horDir; // Horizontal input ka public value
     public Vector2 MoveDirection => moveDir; // Movement direction ka value
@@ -67,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
             rb = GetComponent<Rigidbody2D>(); // Rigidbody null ho to component se le lo
 
         jumpUsed = playerMovementSO.numbersOfJump; // Jump count ko initial value di
+
+        playerDied = false;
     }
 
     private void Start()
@@ -82,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         GravityShift(); // Gravity ko flip karna
 
         stateMachine.CurrentState.FrameUpdate(); // Frame-based FSM logic
+
 
         if (transform.position.y < -20f)
         {
@@ -233,9 +238,11 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("Death");
     }
 
-    private void DeathEnd()
+    private bool DeathEnd()
     {
         Destroy(gameObject);
+        playerDied = true;
+        return playerDied;
     }
 
 
