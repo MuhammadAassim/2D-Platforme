@@ -72,12 +72,18 @@ public class UIManager : MonoBehaviour
     {
         // SceneManager ka use karke "Menu" scene load karo
         // Ensure karo ke "Menu" scene Build Settings mein added ho
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Main Menu");
     }
 
-    public void Quit()
+    public void QuitGame()
     {
-        // Game ko band karne ka function — ye sirf build version mein kaam karega
-        Application.Quit();
+        // Agar Editor mein hain to Play Mode band karo
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+    // Agar Build version hai to game band karo
+    Application.Quit();
+#endif
     }
+
 }

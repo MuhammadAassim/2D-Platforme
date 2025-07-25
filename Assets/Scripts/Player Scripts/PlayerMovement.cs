@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Colliders")]
     [SerializeField] private Collider2D headCollider; // Head collider ground ya ceiling detect karne ke liye
-
     [SerializeField] private Collider2D feetCollider; // Feet collider ground detect karne ke liye
 
     // Internal states
