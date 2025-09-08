@@ -7205,7 +7205,7 @@ Transform:
   m_GameObject: {fileID: 626947642}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -85.3, y: -6, z: 0}
+  m_LocalPosition: {x: -85, y: -6, z: 0}
   m_LocalScale: {x: 12, y: 12, z: 12}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7400,7 +7400,7 @@ Transform:
   m_GameObject: {fileID: 701010857}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -83.522224, y: -1.5, z: -10}
+  m_LocalPosition: {x: -83.21965, y: -1.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7758,8 +7758,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283322111
-  m_fontColor: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8601,9 +8601,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1278786476}
   - component: {fileID: 1278786475}
+  - component: {fileID: 1278786477}
   m_Layer: 0
   m_Name: Level Complete
-  m_TagString: Untagged
+  m_TagString: Level Complete
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8651,7 +8652,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2, y: 18}
+  m_Size: {x: 2, y: 18}
   m_EdgeRadius: 0
 --- !u!4 &1278786476
 Transform:
@@ -8662,12 +8663,25 @@ Transform:
   m_GameObject: {fileID: 1278786474}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 87, y: 0, z: 0}
+  m_LocalPosition: {x: 87.39, y: 0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1278786477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278786474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07c602ebb12a82d4baeaa4f4bf3a4db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneBuildIndex: 2
 --- !u!4 &1285083337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4362524617705536694, guid: d1a19eaff262c9e4da2a13ad99e79b0f, type: 3}
@@ -9726,7 +9740,7 @@ Transform:
   m_GameObject: {fileID: 2032727262}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -71.221, y: -0.0034199953, z: -10}
+  m_LocalPosition: {x: -71.195305, y: -0.0034199953, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9887,7 +9901,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

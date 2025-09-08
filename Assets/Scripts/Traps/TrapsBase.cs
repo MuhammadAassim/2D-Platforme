@@ -14,7 +14,6 @@ public abstract class Trap : MonoBehaviour
         {
             // To player par trap ka effect apply kar do
             TriggerEffect(collision.gameObject);
-
         }
     }
 }
